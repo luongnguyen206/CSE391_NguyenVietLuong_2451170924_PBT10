@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Directory</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="app-shell">
+        <h1>User Directory</h1>
+        <div class="toolbar">
+            <input id="search-input" type="search" placeholder="Tìm name hoặc email" />
+            <button id="reload-btn" type="button">Tải lại</button>
+        </div>
+
+        <section id="message" class="message"></section>
+        <section id="user-list" class="user-list"></section>
+
+        <section class="form-panel">
+            <h2>Thêm / Cập nhật user</h2>
+            <form id="user-form">
+                <input id="name" type="text" placeholder="Name" required />
+                <input id="email" type="email" placeholder="Email" required />
+                <input id="phone" type="text" placeholder="Phone" />
+                <button type="submit">Lưu</button>
+                <button id="cancel-btn" type="button" class="secondary">Hủy</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
