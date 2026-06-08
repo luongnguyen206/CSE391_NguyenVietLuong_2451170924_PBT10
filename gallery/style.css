@@ -1,0 +1,21 @@
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #111827;
+  --border: #e2e8f0;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, sans-serif; background: var(--bg); color: var(--text); }
+.app-shell { max-width: 1200px; margin: 0 auto; padding: 28px 20px; }
+h1 { margin-bottom: 18px; }
+.gallery { display: grid; gap: 16px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.card { overflow: hidden; border-radius: 16px; background: var(--surface); border: 1px solid var(--border); }
+.card img { width: 100%; display: block; cursor: pointer; }
+.load-trigger { margin: 28px auto; padding: 18px; text-align: center; color: #6b7280; }
+.lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.75); display: flex; justify-content: center; align-items: center; padding: 20px; }
+.lightbox.hidden { display: none; }
+.lightbox img { max-width: 100%; max-height: 90vh; border-radius: 14px; }
+.close-btn { position: absolute; top: 20px; right: 20px; width: 44px; height: 44px; border: none; background: white; color: #111827; border-radius: 50%; font-size: 24px; cursor: pointer; }
+@media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .gallery { grid-template-columns: 1fr; } }
